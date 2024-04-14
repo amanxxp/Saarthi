@@ -1,0 +1,45 @@
+.image {
+  height: 40%;
+  margin-right: 10%;
+  width: 50%;
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px;
+}
+.left {
+  margin-left: 10%;
+  width: 50%;
+}
+.heading {
+  font-size: 45px;
+  font-weight: 700;
+}
+.par {
+  width: 70%;
+  margin-top: 20px;
+  font-size: 18px;
+}
+.las {
+  display: flex;
+  margin-top: 30px;
+  gap: 20px;
+  font-size: 20px;
+}
+
+.learnm {
+  border: solid;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.gets {
+  padding: 1%;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  background-color: black;
+  display: flex;
+  align-items: center;
+}

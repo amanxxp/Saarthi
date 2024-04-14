@@ -1,0 +1,40 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left:2.61vw;
+  padding-right: 2.61vw;
+  box-shadow: 0 1px 4px #00000037;
+  margin-bottom: 1.30px;
+  /* position:fixed; */
+  width: 100vw;
+  backdrop-filter: blur(40px);
+}
+.links {
+  display: flex;
+  gap: 5.22vw;
+  align-items: center;
+  font-size: x-large;
+}
+.go {
+  display: flex;
+  gap: 1.95vw;
+  font-size: x-large;
+}
+.join,
+.signup {
+  border: solid;
+  border-radius: 0.65vh;
+  padding-left: 2.61vw;
+  padding-right: 2.61vw;
+  padding-bottom: 0.65vh;
+  padding-top: 0.65vh;
+}
+.join {
+  border-radius: 0px;
+  border-color: grey;
+}
+.signup {
+  background-color: black;
+  color: white;
+}
