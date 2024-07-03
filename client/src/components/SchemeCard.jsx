@@ -2,7 +2,7 @@ import React from "react";
 import "./schemecard.css";
 const SchemeCard = ({ scheme }) => {
   return (
-    <div>
+    <div className="hover:cursor-pointer">
       <div className="card">
         <div className="title">{scheme.Name}</div>
         <div className="des">

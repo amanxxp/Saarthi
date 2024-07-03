@@ -245,7 +245,7 @@ const Jobs = () => {
           </div>
         </form>
       )}
-      <div className="content">
+      <div className="content pt-20">
         <div className="data">
           <h1 className="text">Open Opportunities</h1>
           <p className="text2">

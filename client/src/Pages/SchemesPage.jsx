@@ -13,19 +13,19 @@ const SchemesPage = () => {
   return (
     <div>
       <Nav />
-      <div className="flex justify-center mx-12 gap-6">
-        <div className="w-1/2 overflow-auto">
+      <div className="flex justify-center mx-12 gap-6 pt-28">
+        <div className="w-1/2 ">
           {schemes.map((scheme, index) => (
             <div onClick={() => setSelectedScheme(scheme)} key={index}>
               <SchemeCard scheme={scheme} />
             </div>
           ))}
         </div>
-        <div className="w-1/2 overflow-auto">
+        <div className="w-1/2">
           {selectedScheme && (
             <div className="flex flex-col justify-center items-center m-6 fixed">
               <h2 className="titlee">{selectedScheme.Name}</h2>
-              <p className="diso">{selectedScheme.details}</p>
+              <p className="diso h-40 overflow-scrol">{selectedScheme.details}</p> 
             </div>
           )}
         </div>
