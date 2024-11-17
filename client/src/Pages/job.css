@@ -1,0 +1,20 @@
+
+.content{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.text{
+    font-size: 4.43vw;
+    font-weight: 700;
+}
+.text2{
+    font-size: 1.43vw;
+    margin-left: 1.30vw;
+    font-family: 500;
+    margin-top: 0.65vw;
+}
+img{
+    width:50%;
+    height: 50%;
+}

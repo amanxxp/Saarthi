@@ -1,0 +1,85 @@
+* {
+  overflow-x: hidden;
+}
+.card {
+  border: groove;
+  margin-right: 50px;
+}
+.type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title {
+  font-size: 38px;
+  font-weight: 700;
+}
+.card:hover {
+  .title {
+    font-size: 42px;
+  }
+}
+.dep {
+  font-size: 16px;
+  font-weight: 400;
+}
+.desp {
+  font-size: 18px;
+  margin-top: 20px;
+}
+.type2 {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+}
+.loc {
+  color: blue;
+  text-decoration: underline;
+}
+.jon {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: solid;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.5s;
+  background-color: green;
+  color: white;
+}
+.jon:hover {
+  color: white;
+  cursor: pointer;
+}
+.cardd {
+    font-size: 14px;
+  border: groove;
+  width: 60%;
+  margin-left: 22%;
+  margin-top: 2%;
+  background-color: white;
+  position: fixed;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  border-radius: 2em;
+  
+  justify-content: center;
+  button {
+    transition: all 0.5s;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  .cardin{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+  
+}
