@@ -9,7 +9,7 @@ const {
 const router = require("express").Router();
 router.get("/:id", getPost);
 router.get("/user/:username", getUserPosts);
-router.post("/create",  createPost);
+router.post("/create", createPost);
 router.delete("/:id", deletePost);
-router.get("/",getAllPost);
+router.get("/", getAllPost);
 module.exports = router;

@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Nav from "../components/Nav";
 
 const Community = () => {
   return (
-    <div>Community</div>
-  )
-}
+    <>
+      <Nav />
+    </>
+  );
+};
 
-export default Community
+export default Community;
