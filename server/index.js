@@ -6,6 +6,7 @@ const messageRoute = require("./routes/messageRoute");
 const postRoutes = require("./routes/postRoutes");
 const app = express();
 const socket = require("socket.io");
+const { startMessageConsumer } = require("./services/kafka");
 require("dotenv").config();
 
 app.use(cors());
@@ -20,8 +21,10 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(() => {
+  .then(async () => {
     console.log("DB Connetion Successfull");
+    await startMessageConsumer();
+    console.log("Kafka Consumer started and listening for messages");
   })
   .catch((err) => {
     console.log(err.message);
@@ -40,13 +43,16 @@ const io = socket(server, {
 
 global.onlineUsers = new Map(); //This is a global Map object used to store the mapping between user IDs and their corresponding socket IDs.
 
-io.on("connection", (socket) => { //Listens for new client connections
+io.on("connection", (socket) => {
+  //Listens for new client connections
   global.chatSocket = socket;
-  socket.on("add-user", (userId) => { // Listens for the "add-user" event from the connected client. This event typically sends the user's ID when the user logs in or connects.
+  socket.on("add-user", (userId) => {
+    // Listens for the "add-user" event from the connected client. This event typically sends the user's ID when the user logs in or connects.
     onlineUsers.set(userId, socket.id); // Stores the user ID and associated socket ID in the onlineUsers map. This way, the server knows which socket is connected to which user.
   });
 
-  socket.on("send-msg", (data) => { //Listens for the "send-msg" event, which is typically triggered when a user sends a message.
+  socket.on("send-msg", (data) => {
+    //Listens for the "send-msg" event, which is typically triggered when a user sends a message.
     const sendUserSocket = onlineUsers.get(data.to); //Retrieves the socket ID of the recipient (data.to) from the onlineUsers map.
     if (sendUserSocket) {
       socket.to(sendUserSocket).emit("msg-recieve", data.message); // Sends the message (data.message) to the recipient's socket. The .to() method specifies the target socket ID, and .emit() sends the "msg-recieve" event to that specific client.
