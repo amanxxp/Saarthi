@@ -50,3 +50,24 @@ If you want to run the project concurrently without rebuilding the images every 
 docker-compose up
 ```
 This command will start the containers without rebuilding them. It’s faster and suitable for when no code changes have been made.
+
+# To run kafka and zookeeper in docker : 
+
+## Commands :
+* Start Zookeper Container and expose PORT ```2181```.
+```bash
+docker run -p 2181:2181 zookeeper
+```
+
+* Start Kafka Container, expose PORT ```9092``` and setup ENV variables.
+  
+```bash
+docker run -p 9092:9092 \
+-e KAFKA_ZOOKEEPER_CONNECT=<PRIVATE_IP>:2181 \
+-e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://<PRIVATE_IP>:9092 \
+-e KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1 \
+confluentinc/cp-kafka
+```
+
+
+
