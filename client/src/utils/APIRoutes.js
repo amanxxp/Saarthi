@@ -6,3 +6,4 @@ export const getjobRoute = `${host}/api/posts/`
 export const allUsersRoute = `${host}/api/auth/allusers`
 export const sendMessageRoute = `${host}/api/message/addmsg`
 export const getAllMessagesRoute = `${host}/api/message/getmsg`
+export const getAllScheme = `${host}/api/posts/schemes/scheme`

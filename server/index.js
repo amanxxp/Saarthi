@@ -7,6 +7,7 @@ const postRoutes = require("./routes/postRoutes");
 const app = express();
 const socket = require("socket.io");
 const { startMessageConsumer } = require("./services/kafka");
+const client = require("./services/RedisClient.js");
 require("dotenv").config();
 
 app.use(cors());

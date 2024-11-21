@@ -69,5 +69,9 @@ docker run -p 9092:9092 \
 confluentinc/cp-kafka
 ```
 
+## Start Redis on Docker 
 
-
+* Start Redis Container, expose PORT ```6379``` and Redis-stack on PORT ```8001```
+```bash
+ docker run -d --name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:latest
+```
