@@ -1,4 +1,4 @@
-# Saarthi:
+# Sarathi:
 This project includes a frontend (React) and a backend (Node.js with MongoDB) setup using Docker. The services are managed with Docker Compose for easy deployment and concurrent execution.
 
 # Prerequisites
